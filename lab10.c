@@ -73,7 +73,7 @@ int readDictionary(char* filename, char** pInWords)
 	char word[100];
 	for (int i = 0; i < count; i++) {
 		fscanf(inFile, "%s\n", word);
-		pInWords[i] = (char*)calloc(strlen(word), sizeof(char));
+		pInWords[i] = (char*)calloc(strlen(word)+1, sizeof(char));
 		strcpy(pInWords[i], word);
 	}
 	
